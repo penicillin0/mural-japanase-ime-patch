@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Mural Japanese IME Patch",
+  "version": "1.0.0",
+  "description": "Mural で IME 変換中の Tab キーが新規付箋を作成してしまう問題を回避します。",
+  "content_scripts": [
+    {
+      "matches": ["https://app.mural.co/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
